@@ -32,7 +32,19 @@
 
         public function post(){
             $json = file_get_contents('php://input'); 
-            $res = json_decode($json);                     
+            $res = json_decode($json);
+            $atv = new atividade( $res->idAtividade, 
+                                    $res->idServico,
+                                    $res->idOperador,
+                                    $res->dataInicio,
+                                    $res->dataFim,
+                                    $res->descricao,
+                                    $res->tempo,
+                                    $res->solicitacao,
+                                    $res->atividade,
+                                    $res->shadowing
+                            ); 
+           $atv->insert();
         }
 
         public function update(){

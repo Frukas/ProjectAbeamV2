@@ -39,7 +39,6 @@ function finalizarAtividade(){
     let comentario = $("#comentarios").val()
     let solicitacao = $("#solicitacoes").val()
     let atividade = $("#atividades").val()
-    let sucesso = true
 
     if(startTimeFinal == "" ||  idServico == null || solicitacao == "" || atividade == ""){
         alert("Atividade imcompleta")
@@ -65,8 +64,10 @@ function finalizarAtividade(){
         shadowing :kengakuResult 
     }
             
-    $.post(url, JSON.stringify(data)).fail(function(msg){
+    $.post(url, JSON.stringify(data), resp => console.log(resp)).fail(function(msg){
         alert(msg);       
-   }) 		                 
+   }) 	
+   alert("Apontamento Salvo")
+   window.location.replace("http://localhost/ProjetoAbeamv2")
 }
 
