@@ -15,9 +15,9 @@
         public $idGroup;
         public $ams_servicoscol;
 
-        public function getServiceInfoById($idService){
+        public function getServiceInfoByIdCliente($idCliente){
             $con = new DataBase('ams_servicos');
-            $objResul = $con->select(["idServico=" => $idService])->fetchAll(PDO::FETCH_CLASS, self::class); 
+            $objResul = $con->select(["idCliente=" => $idCliente])->fetchAll(PDO::FETCH_CLASS, self::class); 
 
             $res = json_encode($objResul);            
              

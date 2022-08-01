@@ -20,27 +20,24 @@
         // public $Tipo;
         // public $EstaAtivo;
 
-        public function checkClass(){
-            echo "<h1>Inclusão funcionando".$this->descricao." </h1>";
-        }
 
-        public function __construct($idAtividade = null, $idServico,$idOperador,$dataInicio, $dataFim, $descricao = null, $tempo , $solicitacao,$atividade, $shadowing)
-        {
-            $this->idAtividade = $idAtividade;
-            $this->idServico = $idServico;
-            $this->idOperador = $idOperador;
-            $this->dataInicio = $dataInicio;
-            $this->dataFim = $dataFim;
-            $this->descricao = $descricao;
-            $this->tempo = $tempo;
-            $this->solicitacao = $solicitacao;
-            $this->atividade = $atividade;
-            $this->shadowing = $shadowing;
+        // public function __construct($idAtividade = null, $idServico,$idOperador,$dataInicio, $dataFim, $descricao = null, $tempo , $solicitacao,$atividade, $shadowing)
+        // {
+        //     $this->idAtividade = $idAtividade;
+        //     $this->idServico = $idServico;
+        //     $this->idOperador = $idOperador;
+        //     $this->dataInicio = $dataInicio;
+        //     $this->dataFim = $dataFim;
+        //     $this->descricao = $descricao;
+        //     $this->tempo = $tempo;
+        //     $this->solicitacao = $solicitacao;
+        //     $this->atividade = $atividade;
+        //     $this->shadowing = $shadowing;
             
-            // $this->horasExtras;
-            // $this->Tipo = $Tipo;            
-            // $this->EstaAtivo = $EstaAtivo;            
-        }
+        //     $this->horasExtras;
+        //     $this->Tipo = $Tipo;            
+        //     $this->EstaAtivo = $EstaAtivo;            
+        // }
 
         public function insert(){
             $obDataBase = new DataBase('ams_atividade');

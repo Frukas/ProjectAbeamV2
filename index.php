@@ -11,7 +11,7 @@
 
         <nav class="navbar navbar-expand-lg bg-light list-unstyled p-2 ">
             <li class="nav-item dropdown ms-3">
-                <div class="nav-link dropdown-toggle navbar-brand " role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="nav-link dropdown-toggle navbar-brand fs-5" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Dropdown
                 </div>
                 <ul class="dropdown-menu">
@@ -21,8 +21,9 @@
                     <li><a class="dropdown-item" href="#">Something else here</a></li> -->
                 </ul>
             </li>
-            <div class="me-2 float-left">
-                    <div id="today"></div> 
+            <!-- <div class="me-2 float-left"> -->
+            <div class="position-absolute top-50 end-0 translate-middle-y mx-4">
+                    <div class="fs-5" id="today"></div> 
             </div>
         </nav>
 	</head>
