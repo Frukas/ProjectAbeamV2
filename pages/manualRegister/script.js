@@ -1,11 +1,8 @@
 //Roda quando a pagina esta pronta. Colocar as funçãoes que devem ser executdos quando a página está dando load.
-//Esse script precisa executar em conjunto com o script cronometro.js
-
-$.when($.ready).then(() =>{  
+$.when($.ready).then(() =>{
+    $("#data").val(getTodaySaoPauloDateFormat())
     getClientes()
 })
-
-let EndTime
 
 function getClientes(){
     let url = "http://localhost/ProjetoAbeamv2/App/services/clientService.php";
@@ -38,9 +35,11 @@ function finalizarAtividade(){
     let comentario = $("#comentarios").val()
     let solicitacao = $("#solicitacoes").val()
     let atividade = $("#atividades").val()
+    let tempo = $("#tempo").val()
+    let dia = $("#data").val()
 
-    if(startTimeFinal == "" ||  idServico == null || solicitacao == "" || atividade == ""){
-        alert("Atividade incompleta ")
+    if(   tempo == null || idServico == null || solicitacao == "" || atividade == ""){
+        alert(`Atividade incompleta cuidado dia: ${dia} tempo: ${tempo} idServico: ${idServico} solicitacao: ${solicitacao} atividade: ${atividade}` )
         return
     }
 
@@ -53,10 +52,10 @@ function finalizarAtividade(){
     data = {        
         idServico : idServico,
         idOperador :1,
-        dataInicio :startTimeFinal ,
-        dataFim :endTimeFinal || getTimeSaoPaulo(),
+        dataInicio :dia ,
+        dataFim :dia,
         descricao :comentario,
-        tempo :getCurrentTime(),
+        tempo :tempo,
         solicitacao : solicitacao,
         atividade :atividade,
         shadowing :kengakuResult 

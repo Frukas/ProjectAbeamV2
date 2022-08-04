@@ -1,5 +1,5 @@
 $.when($.ready).then(() =>{    
-    $("#today").html(todaySaoPaulo())  
+   // $("#today").html(todaySaoPaulo())  
 })
 
 function loadPage(page){
@@ -7,7 +7,7 @@ function loadPage(page){
     $("#conteudo").load(page)
 }
 
-function todaySaoPaulo(){
+function getTodaySaoPauloBrazilFormat(){
     const tdy = new Date()
            
     const todaySaoPaulo = tdy.toLocaleString("pt-Br",{
@@ -27,4 +27,14 @@ function hourSaoPaulo(){
     timeZone: "America/Sao_Paulo"      
   })    
     return todaySaoPaulo.substring(19, 11)
+}
+
+function getTodaySaoPauloDateFormat(){
+  let day = new Date()    
+
+  return  day.toLocaleString("sv-SE",{
+      dateStyle: "short",
+      timeStyle: "medium",
+      timeZone: "America/Sao_Paulo"      
+      }).substring(0, 10)
 }

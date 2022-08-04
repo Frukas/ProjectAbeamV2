@@ -27,7 +27,7 @@
             }
         }
 
-        public function execute($query, $params = []){
+        private function execute($query, $params = []){
             try{
                 $statement = $this->connection->prepare($query);
                 $statement->execute($params);
@@ -55,20 +55,28 @@
 
             $res = '';
             $where = '';
+            $count = 0;            
 
             if(!is_null($params)) {
+                $arraySize = count($params);
 
-                $fields = array_keys($params);
-
-                foreach($fields as $field){
-                    $res = $res.$field.$params[$field].' ';
+                foreach($params as $key => $value){
+                    if($arraySize > 0 && $count < $arraySize - 1){
+                        $res = $res.$key.$value.' and ';
+                    }else{
+                        $res = $res.$key.$value;
+                    }   
+                    $count++;                 
                 }
                 $where = ' WHERE '.$res;
             }
 
             $query = 'SELECT * FROM '.$this->table.$where;
-            //var_dump($query);
 
+            return $this->connection->query($query);
+        }
+
+        public function selectByQuery($query){
             return $this->connection->query($query);
         }
     } 

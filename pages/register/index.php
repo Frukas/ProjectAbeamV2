@@ -3,8 +3,9 @@
 	
 	<head>
         <!-- <script src="pages/register/script.js?q=1" defer></script> -->
-		<script src="pages/register/script.js?n=1?" defer></script>
-		<script src="pages/register/cronometro.js?n=1" defer></script>
+		<script src="pages/register/script.js" defer></script>
+		<script src="pages/register/cronometro.js" defer></script>
+
 		<title>Page Title</title>
 	</head>
 	
@@ -24,19 +25,19 @@
 		</div>
 
 		<div class="mt-2 mx-5 row">
-			<div class="col">
+			<div class="col-10">
 				<label class="fs-6 form-label">Comentários</label>
 				<input class="form-control" type="text" id="comentarios"></input>
 			</div>
 
-			<div class="col-md-2">
+			<div class="col-1">
 				<label class="fs-6 form-label">Solicitações</label>
-				<input class="form-control" type="number"  id="solicitacoes"></input>
+				<input class="form-control" type="number"  id="solicitacoes" min="0"></input>
 			</div>
 
-			<div class="col-md-2">
+			<div class="col-1">
 				<label class="fs-6 form-label">Atividades</label>
-				<input class="form-control" type="number"  id="atividades"></input>
+				<input class="form-control" type="number"  id="atividades" min="0"></input>
 			</div>
 		</div>	
 		

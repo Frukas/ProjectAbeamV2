@@ -8,8 +8,8 @@
     $rh = new AtividadeService();
 
     switch($_SERVER['REQUEST_METHOD']){
-        case 'GET':        
-            $rh->get();
+        case 'GET':                               
+            $rh->get();            
         break;
 
         case 'POST':        
@@ -27,13 +27,16 @@
     class AtividadeService{
        
         public function get(){
-            echo "Chegou aqui GET";
+            $rs = $_GET['data'];                      
+            $atv = new atividade(); 
+            echo $atv->getTabelaAtividades($rs, 1);             
         }
 
         public function post(){
             $json = file_get_contents('php://input'); 
             $res = json_decode($json);
-            $atv = new atividade( $res->idAtividade, 
+            $atv = new atividade();
+            $atv->insertData (  
                                     $res->idServico,
                                     $res->idOperador,
                                     $res->dataInicio,
@@ -44,7 +47,7 @@
                                     $res->atividade,
                                     $res->shadowing
                             ); 
-           $atv->insert();
+           $atv->postToDB();
         }
 
         public function update(){
