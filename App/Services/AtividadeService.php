@@ -26,10 +26,21 @@
 
     class AtividadeService{
        
-        public function get(){
-            $rs = $_GET['data'];                      
-            $atv = new atividade(); 
-            echo $atv->getTabelaAtividades($rs, 1);             
+        public function get(){            
+            $rs = $_GET['data'];
+            $atv = new atividade();
+            
+            //Que tipo de pesquisa vai retornar
+            switch($_GET['type']){
+                case 'detailList':  //Dados para o apontamento diário                  
+                    echo $atv->getTabelaAtividades($rs, 1); 
+                break; 
+                case 'monthly':  //Dados para os dias apontados no mês                                     
+                    echo $atv->getApontamentosDoMes($rs, 1);
+                case 'totalDay': //Dados para o apontamento total do dia dos operadores
+                    echo $atv->getTempoTotaldoDia($rs);
+                break;
+            }             
         }
 
         public function post(){

@@ -9,12 +9,18 @@
 	<body>
     <h1 class="text-center m-4">Apontamentos</h1>    
 
-    <div class="d-inline-flex mx-5">
-      <input id="dataRegistro" class="form-control mx-1" type="date" id="dataTabela"/>
-      <button onclick="loadTabela()" class="btn btn-primary mx-1">OK</button>         
+    <div class="d-flex mx-5 justify-content-between align-items-center">
+      <div class="d-inline-flex">
+        <input id="dataRegistro" class="form-control mx-1" type="date" id="dataTabela"/>
+        <button onclick="loadTabela()" class="btn btn-primary mx-1">Refresh</button>       
+        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Mensal</button>        
+      </div> 
+
+      <h5 id="horasTotais"></h5>
     </div>    
 
     <div id="tabela" class="mx-5 mt-3">
+      
       <table  class="table table-striped">
             <thead>
                 <tr>
@@ -32,5 +38,37 @@
             <tbody/>
         </table>
     </div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Apontamentos do Mês</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <table class="table table-striped ">
+              <thead>
+                <tr>
+                  <th scope="col">No.</th>
+                  <th scope="col">Dias</th>
+                  <th scope="col">Tempo</th>   
+                </tr>
+              </thead>
+              <tbody id="dadosTabelaMensal">                
+              </tbody>
+            </table> 
+      </div>
+      <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+       </div>
+    </div>
+  </div>
+</div>
+
 	</body>
 </html>

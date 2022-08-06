@@ -9,17 +9,19 @@
         <script src="index.js" defer></script>
         
         <title>Page Title</title>
+        <!-- <nav class="navbar navbar-expand-lg bg-light list-unstyled p-2 "> -->
 
-        <nav class="navbar navbar-expand-lg bg-light list-unstyled p-2 ">
+        <nav class="navbar bg-primary sticky-top list-unstyled p-2 ">
             <li class="nav-item dropdown ms-3">
                 <div class="nav-link dropdown-toggle navbar-brand fs-5" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Dropdown
                 </div>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" onclick="loadPage(`/projetoabeamv2/pages/register`)" href="#">Apontar</a></li>
+                    <li><a class="dropdown-item" href="/projetoabeamv2/" target="_blank">Apontar</a></li>
                     <li><a class="dropdown-item" onclick="loadPage(`/projetoabeamv2/pages/manualRegister`)" href="#">Apontamento Manual</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" onclick="loadPage(`/projetoabeamv2/pages/activityList`)" href="#">Apontamento de hoje</a></li>
+                    <li><a class="dropdown-item" onclick="loadPage(`/projetoabeamv2/pages/operatorActivityInfo`)" href="#">Apontamento do Time</a></li>                    
                     <li><a class="dropdown-item" onclick="loadPage(`/projetoabeamv2/pages/teste/test.php`)" href="#">Teste de Load</a></li>
                 </ul>
             </li>
@@ -30,7 +32,7 @@
         </nav>
 	</head>
 
-	<body>
+	<body class="bg-light">
 
     <div id="conteudo"></div>
 

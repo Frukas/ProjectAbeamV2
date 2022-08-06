@@ -2,22 +2,91 @@
 
 
 function getData(){
-    
-    let data = "2022-08-02"; 
-    let url = `http://localhost/ProjetoAbeamv2/App/services/atividadeService.php?data=${data}`
+    let data =  "2022-07-01"
+    let url = `http://localhost/ProjetoAbeamv2/App/services/atividadeService.php?data=${data}&type=totalDay`
+    let count = 1
 
-   // $.get(url, msg => console.log(msg))
+    $("#conteudo").empty()
     
-    $.getJSON(url, (result) =>{
-        
-        result.map( (item) => {
-            console.log(item)
-            //$("#conteudo").append(`<p class="text-center">${item.idAtividade} => ${item.dataInicio}</p>`)                                  
-        })
-    })
-    
+    $.getJSON(url, (result) =>{   
+        console.log(result)            
+        // result.map( (item) => {            
+        //     $("#conteudo").append(`<p>
+        //                                     <h5> ${count} </h5>
+        //                                     <h5>${item.Dias}</h5>
+        //                                     <h5>${item.Tempo}</h5>
+        //                                 </p>
+        //                                 `) 
+        //     count++                                                                       
+        // })       
+    })    
 }
 
+
+// function getData(){
+//     let data =  "2022-07-01"
+//     let url = `http://localhost/ProjetoAbeamv2/App/services/atividadeService.php?data=${data}&type=monthly`
+//     let count = 1
+
+//     $("#conteudo").empty()
+    
+//     $.getJSON(url, (result) =>{               
+//         result.map( (item) => {            
+//             $("#conteudo").append(`<p>
+//                                             <h5> ${count} </h5>
+//                                             <h5>${item.Dias}</h5>
+//                                             <h5>${item.Tempo}</h5>
+//                                         </p>
+//                                         `) 
+//             count++                                                                       
+//         })       
+//     })    
+// }
+
+// function getData(){
+//     let data =  "2022-07-01"
+//     let url = `http://localhost/ProjetoAbeamv2/App/services/atividadeService.php?data=${data}&type=monthly`
+//     let count = 1
+
+//     $("#conteudo").empty()
+    
+//     $.getJSON(url, (result) =>{               
+//         result.map( (item) => {            
+//             $("#conteudo").append(`<p>
+//                                             <h5> ${count} </h5>
+//                                             <h5>${item.Dias}</h5>
+//                                             <h5>${item.Tempo}</h5>
+//                                         </p>
+//                                         `) 
+//             count++                                                                       
+//         })       
+//     })    
+// }
+
+// function getData(){
+
+//     let data = "2022-08-02"; 
+//     let url = `http://localhost/ProjetoAbeamv2/App/services/atividadeService.php?data=${data}&type=monthly`
+
+//     $.get(url, msg => console.log(msg))
+// }
+
+// function getData(){
+    
+//     let data = "2022-08-02"; 
+//     let url = `http://localhost/ProjetoAbeamv2/App/services/atividadeService.php?data=${data}`
+
+//    // $.get(url, msg => console.log(msg))
+    
+//     $.getJSON(url, (result) =>{
+        
+//         result.map( (item) => {
+//             console.log(item)
+//             //$("#conteudo").append(`<p class="text-center">${item.idAtividade} => ${item.dataInicio}</p>`)                                  
+//         })
+//     })
+    
+// }
 
 // function getData($idClient){
 //     $.ajax({

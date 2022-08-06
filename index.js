@@ -1,5 +1,5 @@
 $.when($.ready).then(() =>{    
-   // $("#today").html(todaySaoPaulo())  
+  loadPage(`/projetoabeamv2/pages/register`)
 })
 
 function loadPage(page){
