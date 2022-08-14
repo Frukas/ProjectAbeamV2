@@ -5,8 +5,7 @@ $.when($.ready).then(() =>{
   userId = $.cookie("id")
   userName = $.cookie("name")
   
-  $("#userName").html(userName)
-
+  loadImgAndName()
   loadPage(`/projetoabeamv2/pages/register`)
 })
 
@@ -45,4 +44,9 @@ function getTodaySaoPauloDateFormat(){
       timeStyle: "medium",
       timeZone: "America/Sao_Paulo"      
       }).substring(0, 10)
+}
+
+function loadImgAndName(){
+  let tag = `<img src="/projetoabeamv2/img/${userId}.png" width="30" height="30" class="d-inline-block align-top rounded-circle" alt=""><span class="mx-1">${userName}</span>`
+  $("#userName").html(tag)
 }

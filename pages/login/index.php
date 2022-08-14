@@ -6,7 +6,9 @@
       <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
       <script src="script.js" defer></script>
 
-	    <title>ABEAM Controller</title>
+      <link rel="icon" href="/Img/favicon.ico" type="image/ico">
+
+	  <title>Ito Tool</title>
   
       <title class="text-center">Globant Ito Tool</title>	      
     </head>
