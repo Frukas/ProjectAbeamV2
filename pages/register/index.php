@@ -2,7 +2,9 @@
 	<html>
 	
 	<head>
-        <!-- <script src="pages/register/script.js?q=1" defer></script> -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>   
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+		<script src="../../loginCheck.js" > </script>  
 		<script src="pages/register/script.js" defer></script>
 		<script src="pages/register/cronometro.js" defer></script>
 

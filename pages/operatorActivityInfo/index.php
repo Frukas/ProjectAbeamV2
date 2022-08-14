@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 	<html>
 	<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>   
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="../../loginCheck.js" > </script>
     <script src="pages/operatorActivityInfo/script.js" defer></script>
 
 		<title>Page Title</title>

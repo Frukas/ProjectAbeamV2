@@ -52,7 +52,7 @@ function finalizarAtividade(){
 
     data = {        
         idServico : idServico,
-        idOperador :1,
+        idOperador :userId,
         dataInicio :startTimeFinal ,
         dataFim :endTimeFinal || getTimeSaoPaulo(),
         descricao :comentario,
@@ -66,6 +66,7 @@ function finalizarAtividade(){
         alert(msg);       
    }) 	
    alert("Apontamento Salvo")
-   window.location.replace("http://localhost/ProjetoAbeamv2")
+
+   window.location.replace("/ProjetoAbeamV2")
 }
 

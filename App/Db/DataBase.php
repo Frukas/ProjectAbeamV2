@@ -72,6 +72,7 @@
             }
 
             $query = 'SELECT * FROM '.$this->table.$where;
+            //var_dump($query);
 
             return $this->connection->query($query);
         }

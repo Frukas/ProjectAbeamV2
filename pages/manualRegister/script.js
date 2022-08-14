@@ -51,7 +51,7 @@ function finalizarAtividade(){
 
     data = {        
         idServico : idServico,
-        idOperador :1,
+        idOperador :userId,
         dataInicio :dia ,
         dataFim :dia,
         descricao :comentario,

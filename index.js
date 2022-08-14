@@ -1,4 +1,12 @@
-$.when($.ready).then(() =>{    
+let userId
+let userName
+
+$.when($.ready).then(() =>{ 
+  userId = $.cookie("id")
+  userName = $.cookie("name")
+  
+  $("#userName").html(userName)
+
   loadPage(`/projetoabeamv2/pages/register`)
 })
 

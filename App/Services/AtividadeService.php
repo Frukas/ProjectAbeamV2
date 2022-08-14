@@ -28,15 +28,17 @@
        
         public function get(){            
             $rs = $_GET['data'];
+            $usId = $_GET['id'];
             $atv = new atividade();
             
             //Que tipo de pesquisa vai retornar
             switch($_GET['type']){
                 case 'detailList':  //Dados para o apontamento diário                  
-                    echo $atv->getTabelaAtividades($rs, 1); 
+                    echo $atv->getTabelaAtividades($rs, $usId); 
                 break; 
                 case 'monthly':  //Dados para os dias apontados no mês                                     
-                    echo $atv->getApontamentosDoMes($rs, 1);
+                    echo $atv->getApontamentosDoMes($rs, $usId);
+                break;
                 case 'totalDay': //Dados para o apontamento total do dia dos operadores
                     echo $atv->getTempoTotaldoDia($rs);
                 break;

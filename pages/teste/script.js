@@ -1,47 +1,50 @@
 //Roda quando a pagina esta pronta. Colocar as funçãoes que devem ser executdos quando a página está dando load.
 
 
+// function getData(){
+//     let data =  "fmolina"
+//     let pass = "Abeam001"
+//    // let url = `http://localhost/ProjetoAbeamv2/App/services/loginService.php?user=${data}&password=${pass}`
+//     let url = `http://localhost/ProjetoAbeamv2/App/services/loginService.php?user=${data}&password=${pass}`        
+
+//     //$("#conteudo").empty()
+    
+//     // $.get(url, (msg) => {
+//     //     console.log(msg)
+//     //     if(msg.length <= 4){
+//     //         console.log("vazio")
+//     //     }
+
+//     // })
+
+//         $.getJSON(url, (result) =>{               
+//          console.log(result.length < 1)       
+//     })    
+// }
+
+
 function getData(){
     let data =  "2022-07-01"
+    let id = 1
     let url = `http://localhost/ProjetoAbeamv2/App/services/atividadeService.php?data=${data}&type=totalDay`
     let count = 1
 
-    $("#conteudo").empty()
+    $.get(url, msg => console.log(msg))
+
+    // $("#conteudo").empty()
     
-    $.getJSON(url, (result) =>{   
-        console.log(result)            
-        // result.map( (item) => {            
-        //     $("#conteudo").append(`<p>
-        //                                     <h5> ${count} </h5>
-        //                                     <h5>${item.Dias}</h5>
-        //                                     <h5>${item.Tempo}</h5>
-        //                                 </p>
-        //                                 `) 
-        //     count++                                                                       
-        // })       
-    })    
+    // $.getJSON(url, (result) =>{               
+    //     result.map( (item) => {            
+    //         $("#conteudo").append(`<p>
+    //                                         <h5> ${count} </h5>
+    //                                         <h5>${item.Dias}</h5>
+    //                                         <h5>${item.Tempo}</h5>
+    //                                     </p>
+    //                                     `) 
+    //         count++                                                                       
+    //     })       
+    // })    
 }
-
-
-// function getData(){
-//     let data =  "2022-07-01"
-//     let url = `http://localhost/ProjetoAbeamv2/App/services/atividadeService.php?data=${data}&type=monthly`
-//     let count = 1
-
-//     $("#conteudo").empty()
-    
-//     $.getJSON(url, (result) =>{               
-//         result.map( (item) => {            
-//             $("#conteudo").append(`<p>
-//                                             <h5> ${count} </h5>
-//                                             <h5>${item.Dias}</h5>
-//                                             <h5>${item.Tempo}</h5>
-//                                         </p>
-//                                         `) 
-//             count++                                                                       
-//         })       
-//     })    
-// }
 
 // function getData(){
 //     let data =  "2022-07-01"

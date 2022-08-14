@@ -3,9 +3,10 @@ $.when($.ready).then(() =>{
     loadTabela()
 })
 
-function loadTabela(){
+function loadTabela(){    
     let data =  $("#dataRegistro").val() 
-    let url = `http://localhost/ProjetoAbeamv2/App/services/atividadeService.php?data=${data}&type=detailList`
+    
+    let url = `http://localhost/ProjetoAbeamv2/App/services/atividadeService.php?data=${data}&id=${userId}&type=detailList`
     let count = 1
     let totalHour = 0
 
@@ -26,9 +27,8 @@ function loadTabela(){
                                         `) 
 
             if(item.descricao != "Almoco")                            
-                totalHour = totalHour + parseInt(item.minutos)             
-            
-            console.log(totalHour)                                   
+                totalHour = totalHour + parseInt(item.minutos)          
+                                             
             count++                                 
         })         
         $("#horasTotais").empty()
@@ -40,13 +40,14 @@ function loadTabela(){
 
 function loadTabelaMensal(){    
     let data =  $("#dataRegistro").val() 
-    let url = `http://localhost/ProjetoAbeamv2/App/services/atividadeService.php?data=${data}&type=monthly`
+    let url = `http://localhost/ProjetoAbeamv2/App/services/atividadeService.php?data=${data}&id=${userId}&type=monthly`
     let count = 1
 
     $("#dadosTabelaMensal").empty()    
     
     $.getJSON(url, (result) =>{                      
-        result.map( (item) => {                      
+        result.map( (item) => {  
+            console.log(item)                    
             $("#dadosTabelaMensal").append(`<tr>
                                             <th scope="row">${count} </th>
                                             <td>${item.Dias}</td>
