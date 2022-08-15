@@ -31,6 +31,7 @@
             echo $cli->getClientsInfo();            
         }
 
+        //TODO: para postar na tabela serviço
         public function post(){
             echo "Chegou aqui POST";
         }

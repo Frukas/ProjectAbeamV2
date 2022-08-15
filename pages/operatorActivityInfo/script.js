@@ -1,3 +1,4 @@
+//Pagina "Apontamento do Time"
 $.when($.ready).then(() =>{    
 
     $("#dataRegistro").val(getTodaySaoPauloDateFormat())  

@@ -1,4 +1,5 @@
 <?PHP
+    //Esqueleto básico do serviço. Somente para referência.
     namespace App\Services;    
 
     $rh = new ServiceTemplate();

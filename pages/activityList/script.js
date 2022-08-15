@@ -1,3 +1,4 @@
+//Página Apontamento de hoje
 $.when($.ready).then(() =>{
     $("#dataRegistro").val(getTodaySaoPauloDateFormat())  
     loadTabela()

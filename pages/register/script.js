@@ -1,5 +1,7 @@
+//Página "Apontar"
 //Roda quando a pagina esta pronta. Colocar as funçãoes que devem ser executdos quando a página está dando load.
 //Esse script precisa executar em conjunto com o script cronometro.js
+
 
 $.when($.ready).then(() =>{  
     getClientes()

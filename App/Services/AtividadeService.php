@@ -33,7 +33,7 @@
             
             //Que tipo de pesquisa vai retornar
             switch($_GET['type']){
-                case 'detailList':  //Dados para o apontamento diário                  
+                case 'detailList':  //Dados para o apontamento diário                   
                     echo $atv->getTabelaAtividades($rs, $usId); 
                 break; 
                 case 'monthly':  //Dados para os dias apontados no mês                                     

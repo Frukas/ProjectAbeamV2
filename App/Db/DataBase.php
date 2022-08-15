@@ -38,6 +38,10 @@
             }
         }
 
+        /*
+        Recebe um map com o campo e o valor.
+        Exemplo da função insert: insert(["nome" => "Maria", "idade" => 58, "estado" => "Sergipe" ])
+        */        
         public function insert($values){
             $fields = array_keys($values);
             $binds = array_pad([],count($fields),"?");
@@ -49,8 +53,13 @@
             $this->execute($query, array_values($values));
 
             return $this->connection->lastInsertId();
-        }
-        
+        }        
+
+        /*
+        Exemplo de select : select([ "id=" => 1]), retorna os valores que o id é igual a 1;
+        Exemplo 2: select([ "data>" => "2022-08-01", "data<=" => "2022-08-10"]) 
+        retorna datas que são maiores que 2022-08-01 e menores e iguals a 2022-08-10
+        */        
         public function select($params = null){
 
             $res = '';
@@ -77,6 +86,7 @@
             return $this->connection->query($query);
         }
 
+        //Caso seja necessário uma query mais complexa pode utilizar essa função colocando a query diretamente        
         public function selectByQuery($query){
             return $this->connection->query($query);
         }

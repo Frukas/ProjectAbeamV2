@@ -1,4 +1,4 @@
-//Roda quando a pagina esta pronta. Colocar as funçãoes que devem ser executdos quando a página está dando load.
+//Página Apontamento Manual
 $.when($.ready).then(() =>{
     $("#data").val(getTodaySaoPauloDateFormat())
     getClientes()
