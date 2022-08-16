@@ -65,6 +65,8 @@ function finalizarAtividade(){
         alert(msg);       
    }) 	
    alert("Apontamento Salvo")
-   window.location.replace("http://localhost/ProjetoAbeamv2")
+   //window.location.replace("/ProjetoAbeamV2")
+
+   loadPage(`/projetoabeamv2/pages/manualRegister`)
 }
 

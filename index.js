@@ -1,6 +1,7 @@
 let userId
 let userName
 
+//roda quando a página é carregada.
 $.when($.ready).then(() =>{ 
   userId = $.cookie("id")
   userName = $.cookie("name")
