@@ -13,7 +13,7 @@
             $rh->post();
         break;
 
-        case 'UPDATE':        
+        case 'PUT':        
             $rh->update();
         break;
         
