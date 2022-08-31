@@ -3,24 +3,12 @@
 
     $rh = new ServiceTemplate();
 
-    switch($_SERVER['REQUEST_METHOD']){
-        case 'GET':        
-            $rh->get();
-        break;
-
-        case 'POST':        
-            $rh->post();
-        break;
-
-        case 'PUT':        
-            $rh->update();
-        break;
+    require '_httpHandler.php';
         
-        default:
-        echo "<h1>Method unknown</h1>";
-    } 
+    $service = new httpHandler();
+    $service->handleRequest(new operadorService());
 
-    class ServiceTemplate{
+    class operadorService{
        
         public function get(){
             echo "Chegou aqui GET";

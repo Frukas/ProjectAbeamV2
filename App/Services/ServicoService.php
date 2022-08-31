@@ -4,29 +4,12 @@
     use App\Classes\servicos;
 
     require '..\Classes\servicos.php'; 
-
-    $rh = new ServiceTemplate();
-    
-    
-    
-    switch($_SERVER['REQUEST_METHOD']){
-        case 'GET':          
-           $rh->get();
-        break;
-
-        case 'POST':        
-            $rh->post();
-        break;
-
-        case 'PUT':        
-            $rh->update();
-        break;
+    require '_httpHandler.php';
         
-        default:
-        echo "<h1>Method unknown</h1>";
-    } 
+    $service = new httpHandler();
+    $service->handleRequest(new ServicoService());
 
-    class ServiceTemplate{
+    class ServicoService{
        
         public function get(){
             $rs = $_GET['idClient'];            
@@ -38,7 +21,7 @@
             echo "Chegou aqui POST";
         }
 
-        public function update(){
+        public function put(){
             echo "Chegou aqui UPDATE";
         }
     }

@@ -3,26 +3,11 @@
 
     use App\Classes\cliente;
 
-    require '..\Classes\cliente.php';  
-
-    $rh = new clientService();    
-
-    switch($_SERVER['REQUEST_METHOD']){
-        case 'GET':        
-            $rh->get();
-        break;
-
-        case 'POST':        
-            $rh->post();
-        break;
-
-        case 'PUT':        
-            $rh->update();
-        break;
+    require '..\Classes\cliente.php';
+    require '_httpHandler.php';
         
-        default:
-        echo "<h1>Method unknown</h1>";
-    } 
+    $service = new httpHandler();
+    $service->handleRequest(new clientService());
 
     class clientService{        
        

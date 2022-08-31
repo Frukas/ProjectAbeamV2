@@ -3,26 +3,11 @@
 
     use App\Classes\atividade;
     
-    require '..\Classes\atividade.php';  
-
-    $rh = new AtividadeService();
-
-    switch($_SERVER['REQUEST_METHOD']){
-        case 'GET':                               
-            $rh->get();            
-        break;
-
-        case 'POST':        
-            $rh->post();
-        break;
-
-        case 'PUT':        
-            $rh->update();
-        break;
+    require '..\Classes\atividade.php';
+    require '_httpHandler.php';
         
-        default:
-        echo "<h1>Method unknown</h1>";
-    } 
+    $service = new httpHandler();
+    $service->handleRequest(new AtividadeService());
 
     class AtividadeService{
        
