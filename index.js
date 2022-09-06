@@ -51,3 +51,10 @@ function loadImgAndName(){
   let tag = `<img src="/projetoabeamv2/img/${userId}.png" width="30" height="30" class="d-inline-block align-top rounded-circle" alt=""><span class="mx-1">${userName}</span>`
   $("#userName").html(tag)
 }
+
+function logOut(){
+  $.cookie('id', null, { path: '/ProjetoAbeamV2' }); 
+  $.cookie('name', null, { path: '/ProjetoAbeamV2' });
+  
+  window.location.replace("/ProjetoAbeamV2/Pages/login")   
+}

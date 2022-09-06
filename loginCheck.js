@@ -1,4 +1,5 @@
-if($.cookie("id") == null ){
+if($.cookie("id") == null ){    
     window.location.replace("/ProjetoAbeamV2/Pages/login")
 }
 
+history.forward()

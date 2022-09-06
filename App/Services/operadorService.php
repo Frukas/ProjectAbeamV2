@@ -18,7 +18,7 @@
             echo "Chegou aqui POST";
         }
 
-        public function update(){
+        public function put(){
             echo "Chegou aqui UPDATE";
         }
     }

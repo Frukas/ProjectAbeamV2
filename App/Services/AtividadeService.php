@@ -48,7 +48,7 @@
            $atv->postToDB();
         }
 
-        public function update(){
+        public function put(){
             echo "Chegou aqui UPDATE";
         }
     }

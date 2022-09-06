@@ -15,7 +15,7 @@
                 break;
         
                 case 'PUT':        
-                    $rh->update();
+                    $rh->put();
                 break;
                 
                 default:
