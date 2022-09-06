@@ -6,8 +6,8 @@ let startTimeFinal = 0
 let endTimeFinal = 0
 let currentTime = 0
 
-function checkAlarm(temp)  {
-    
+function checkAlarm(temp)  {    
+
     if(vm <= 0){
         vm = parseInt(document.getElementById("cbmin").value) ;
         currentVm = parseInt(document.getElementById("cbmin").value)        
@@ -80,12 +80,11 @@ function pauseAudio() {
 }
 
 function AlertDIV() {
-  var x = document.getElementById("alerta");
-    x.style.display = "block";
+  var x = document.getElementById("alerta");    
 } 
+
 function fecharDIV() {
-  var x = document.getElementById("alerta");
-    x.style.display = "none";
+  var x = document.getElementById("alerta");   
 } 
 
 function getCurrentTime(){

@@ -21,7 +21,7 @@
 		</div>
 		
 		<div class="text-center">			
-			<p id="tempo" name="tempo" class="fs-1 m-2">00:00:00</p>
+			<p id="tempo" name="tempo" class="fs-1 m-4">00:00:00</p>
 			<button id="btnStart" onclick="iniciar()" class="btn btn-success  fs-5 px-3" name="tempo">Start</button>
 			<button id="btnPause" onclick="parar()" class="btn btn-danger fs-5  px-3">Stop</button>
 		</div>
@@ -43,11 +43,11 @@
 			</div>
 		</div>	
 		
-		<div class="text-center m-2">			
+		<div class="text-center m-3">			
 			<input class="form-check-input  fs-6 " id="kengaku" type="checkbox" value="Shadowning">Kengaku</input>			
 		</div>
 
-		<div class="text-center mx-5 ">
+		<div class="text-center m-5">
 			<button class="btn btn-primary w-100 " onClick="finalizarAtividade()">Finalizar Atividade</button>
 		</div>
 		
@@ -57,7 +57,8 @@
 	<footer>
 		<div class="border-top border-opacity-25 m-5 text-center ">
 			<div class="m-2 fs-5">Proximo alerta em 
-				<select id="cbmin">						  
+				<select id="cbmin">
+					<option value='60'>1</option>					  
 					<option value='300'>5</option>
 					<option  value='900'>15</option>
 					<option value='1800'>30</option>
